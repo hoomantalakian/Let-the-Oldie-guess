@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Instructions from "./components/Instructions";
+import Screen from "./components/Screen";
+// import "./normalize-8.0.1.css"
+import "./resetCSS-2.0.css"
+import "./App.css"
+import Background from "./assets/PC.jpg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+	return (
+		<div className="app">
+            <img className="background" src={Background} alt="" />
+            <Screen className="screen"/>
+            <Instructions className="instruction"/>
+		</div>
+	);
 }
 
 export default App;
