@@ -1,24 +1,34 @@
+body {
+	background: rgb(215, 187, 138);
+	background: linear-gradient(
+		0deg,
+		rgba(215, 187, 138, 1) 0%,
+		rgba(179, 141, 94, 1) 100%
+	);
+}
+
 * {
 	overflow: hidden;
 }
 .app {
 	/* position: fixed;     */
-    height: 100vh;
+	height: 100vh;
 }
 
 .screen {
-    height: 100vh;
+	/* height: 100vh; */
 	position: fixed;
 	left: 8.5vw;
-	top: 20vh;
+	/* top: 10%; */
+	margin-top: 11%;
 	width: 45vw;
 }
 
 .instruction {
 	position: fixed;
-	right: 2vw;
-	top: 13vh;
-	width: 45vw;
+	right: 5%;
+	margin-top: 8%;
+	width: 41%;
 }
 
 html {

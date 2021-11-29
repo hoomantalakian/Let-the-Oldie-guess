@@ -24,6 +24,14 @@ function reducer(state, action) {
 			computerGuess: getRandomInt(state.minNum, state.computerGuess - 1),
 		};
 	}
+	if (action.type === "RESET") {
+		return {
+			minNum: 1,
+			maxNum: 100,
+			computerGuess: getRandomInt(1, 100),
+		};
+	}
+
 	return {};
 }
 
@@ -34,7 +42,7 @@ function Screen() {
 	const [stateNum, dispatchNum] = useReducer(reducer, {
 		minNum: 1,
 		maxNum: 100,
-		computerGuess: getRandomInt(0, 100),
+		computerGuess: getRandomInt(1, 100),
 	});
 
 	function isPlayingToggle() {
@@ -53,6 +61,10 @@ function Screen() {
 		console.log("MaxHandler submit...");
 		dispatchNum({ type: "MAX_HOLDER" });
 	}
+	function resetHandler() {
+		dispatchNum({ type: "RESET" });
+
+	}
 
 	/////
 	console.log(
@@ -68,7 +80,7 @@ function Screen() {
 						<br />
 						Are you ready?
 					</h1>
-					<button className="button" onClick={isPlayingToggle}>Yes Let's go!</button>
+					<button className="button" onClick={isPlayingToggle}>Yes! Let's go</button>
 				</Fragment>
 			)}
 
@@ -99,6 +111,7 @@ function Screen() {
 					</h1>
 					<button className="button"
 						onClick={() => {
+							resetHandler();
 							isPlayingToggle();
 							isEndedToggle();
 						}}

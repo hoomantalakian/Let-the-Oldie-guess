@@ -1,17 +1,19 @@
 .instruction {
 	list-style: circle;
 	list-style-position: inside;
+    text-shadow: -0.2em 0.2em 0.3em rgba(97, 82, 57, 0.472);
+
 }
 
 .instruction h1 {
 	font-weight: 800;
-	font-size: 6vw;
+	font-size: 5vw;
     text-align: center;
-    margin-bottom: 2vh;
+    margin-bottom: 5%;
 }
 
 .instruction li {
     list-style-type: square;
     font-weight: 400;
-	font-size: 3vw;
+	font-size: 2.5vw;
 }

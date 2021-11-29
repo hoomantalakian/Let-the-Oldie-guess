@@ -8,11 +8,10 @@
 .button {
 	color: inherit;
 	border-style: none;
-	/* border: 3px solid rgba(18, 248, 75, 0.637); */
 	border-bottom: 3px solid rgb(88, 218, 28);
 	background-color: rgba(246, 13, 13, 0);
 	font-family: inherit;
-	font-weight: 800;
+	font-weight: 600;
 	font-size: 4vw;
 	text-shadow: inherit;
 }
@@ -23,12 +22,10 @@
 	width: 6vw;
 	padding: 0 1vw;
 	margin-bottom: 2vh;
-	/* -webkit-filter: drop-shadow(5px 5px 5px rgb(26, 255, 26));
-	filter: drop-shadow(5px 5px 5px rgb(209, 37, 37)); */
 }
 .screen h1 {
-	margin-bottom: 4vh;
-	font-weight: 800;
+	margin-bottom: 5%;
+	font-weight: 400;
 	font-size: 4vw;
 }
 .screen p {
