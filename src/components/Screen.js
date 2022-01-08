@@ -1,4 +1,4 @@
-import React, { Fragment , useState, useReducer } from "react";
+import React, { Fragment, useState, useReducer } from "react";
 import upArrow from "../assets/up-pixel.svg";
 import downArrow from "../assets/down-pixel.svg";
 import "./Screen.css";
@@ -61,9 +61,9 @@ function Screen() {
 		console.log("MaxHandler submit...");
 		dispatchNum({ type: "MAX_HOLDER" });
 	}
+
 	function resetHandler() {
 		dispatchNum({ type: "RESET" });
-
 	}
 
 	/////
@@ -71,16 +71,18 @@ function Screen() {
 		`{min: ${stateNum.minNum}, max: ${stateNum.maxNum}, Guess: ${stateNum.computerGuess}}`
 	); /////
 	return (
-		<div className="screen"  >
+		<div className="screen">
 			{/* intro */}
 			{!isPlaying && !isEnded && (
-				<Fragment >
-					<h1 >
+				<Fragment>
+					<h1>
 						Hey!
 						<br />
 						Are you ready?
 					</h1>
-					<button className="button" onClick={isPlayingToggle}>Yes! Let's go</button>
+					<button className="button" onClick={isPlayingToggle}>
+						Yes! Let's go
+					</button>
 				</Fragment>
 			)}
 
@@ -88,9 +90,20 @@ function Screen() {
 			{isPlaying && !isEnded && (
 				<Fragment>
 					<h1>{`Is that: ${stateNum.computerGuess} ?`}</h1>
-					<img onClick={minHandler} src={upArrow} alt="" className="arrow" />
-					<img onClick={maxHandler} src={downArrow} alt="" className="arrow"/>
-					<button className="button ok"
+					<img
+						onClick={minHandler}
+						src={upArrow}
+						alt=""
+						className="arrow pointer"
+					/>
+					<img
+						onClick={maxHandler}
+						src={downArrow}
+						alt=""
+						className="arrow pointer"
+					/>
+					<button
+						className="button ok"
 						onClick={() => {
 							isPlayingToggle();
 							isEndedToggle();
@@ -109,7 +122,8 @@ function Screen() {
 						<br />
 						Play again? :)
 					</h1>
-					<button className="button"
+					<button
+						className="button"
 						onClick={() => {
 							resetHandler();
 							isPlayingToggle();
