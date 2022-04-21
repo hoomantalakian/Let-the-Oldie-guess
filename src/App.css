@@ -41,3 +41,21 @@ html {
 	height: auto;
 	z-index: -10;
 }
+@media (orientation: portrait) {
+	html {
+		background: rgb(215, 187, 138);
+		content: "Joe's Task: ";
+	}
+	.app {
+		display: none;
+	}
+	.alert {
+		letter-spacing: 1px;
+		margin: auto;
+		margin-top: 50%;
+		width: 50%;
+		text-align: center;
+		font-size: 70px;
+		font-weight: 400;
+	}
+}
